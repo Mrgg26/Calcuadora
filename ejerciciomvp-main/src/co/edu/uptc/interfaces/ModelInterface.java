@@ -1,5 +1,6 @@
 package co.edu.uptc.interfaces;
 
 public interface ModelInterface {
-    byte exec(byte number1, byte number2) throws Exception;
+    int exec(int number1, int number2) throws Exception;
 }
+

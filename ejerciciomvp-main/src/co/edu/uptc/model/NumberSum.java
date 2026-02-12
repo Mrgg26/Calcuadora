@@ -5,19 +5,15 @@ import co.edu.uptc.interfaces.PresenterInterface;
 
 public class NumberSum implements ModelInterface {
 
-        @Override
-        public byte exec(byte number1, byte number2) throws Exception {
-            if (number1 < 0 || number2 < 0) {
-                throw new Exception("Error del Modelo: Solo se permiten números positivos.");
-            }
+    @Override
+    public int exec(int number1, int number2) throws Exception {
 
-            int result = number1 + number2;
-
-            if (result > Byte.MAX_VALUE || result < Byte.MIN_VALUE) {
-                throw new Exception("Error del Modelo: El resultado excede la capacidad de un byte.");
-            }
-
-            return (byte) result;
+        int result = number1 + number2;
+        if (result > Integer.MAX_VALUE || result < Integer.MIN_VALUE) {
+            throw new Exception("Error del Modelo: El resultado excede la capacidad de un int.");
         }
 
+        return (int) result;
+    }
 }
+
