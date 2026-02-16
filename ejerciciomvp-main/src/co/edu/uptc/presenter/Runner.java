@@ -13,14 +13,15 @@ public class Runner {
 
 
     private void makeMVP(){
-        presenter = new MainPresenter();
         model = new NumberSum();
+        presenter = new MainPresenter();
         view = new ConsoleView();
 
         presenter.setModel(model);
         presenter.setView(view);
         view.setPresenter(presenter);
     }
+
 
     public void start(){
         makeMVP();

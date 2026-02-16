@@ -22,8 +22,9 @@ public class ConsoleView implements ViewInterface {
         this.presenter = presenter;
     }
 
+
     @Override
-    public void showResult(int result) {
+    public void showResult(String result) {
         System.out.println("--------------------------------");
         System.out.println("Suma realizada con éxito.");
         System.out.println("EL RESULTADO ES: " + result);

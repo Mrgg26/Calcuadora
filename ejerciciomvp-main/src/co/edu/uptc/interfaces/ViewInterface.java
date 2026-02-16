@@ -4,7 +4,7 @@ public interface ViewInterface {
 
     void setPresenter(PresenterInterface presenter);
 
-    void showResult(int result);
+    void showResult(String result);
     void showError(String message);
     void start();
 

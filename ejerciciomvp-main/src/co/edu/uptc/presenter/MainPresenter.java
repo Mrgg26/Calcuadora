@@ -5,12 +5,11 @@ import co.edu.uptc.interfaces.PresenterInterface;
 import co.edu.uptc.interfaces.ViewInterface;
 
 public class MainPresenter implements PresenterInterface {
+
     private ViewInterface view;
     private ModelInterface model;
 
-    public void SumPresenter(ViewInterface view, ModelInterface model) {
-        this.view = view;
-        this.model = model;
+    public MainPresenter() {
     }
 
     @Override
@@ -23,18 +22,14 @@ public class MainPresenter implements PresenterInterface {
         this.model = model;
     }
 
+
     @Override
     public void onCalculateRequested(String strNumber1, String strNumber2) {
+
         try {
-            int n1 = Integer.parseInt(strNumber1);
-            int n2 = Integer.parseInt(strNumber2);
+            String result = String.valueOf(model.exec(strNumber1, strNumber2));
+            view.showResult(String.valueOf(result));
 
-            int result = model.exec(n1, n2);
-
-            view.showResult(result);
-
-        } catch (NumberFormatException e) {
-            view.showError("Formato inválido: Por favor ingrese solo números enteros.");
         } catch (Exception e) {
             view.showError(e.getMessage());
         }
