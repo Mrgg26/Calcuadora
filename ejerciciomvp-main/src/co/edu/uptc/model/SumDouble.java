@@ -2,7 +2,7 @@ package co.edu.uptc.model;
 
 import co.edu.uptc.interfaces.ModelInterface;
 
-public class SumByte implements ModelInterface {
+public class SumDouble implements ModelInterface {
 
     @Override
     public String exec(String number1, String number2) throws Exception {
@@ -19,7 +19,9 @@ public class SumByte implements ModelInterface {
             return Double.toString(n1 + n2);
 
         } catch (NumberFormatException e) {
-            throw new Exception("Debe ingresar números válidos tipo byte (-128 a 127).");
+            throw new Exception("Debe ingresar números válidos entre (±1.7E308).");
         }
     }
 }
+
+

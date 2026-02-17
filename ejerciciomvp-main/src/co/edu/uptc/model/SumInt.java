@@ -19,7 +19,7 @@ public class SumInt implements ModelInterface {
             return Integer.toString(n1 + n2);
 
         } catch (NumberFormatException e) {
-            throw new Exception("Debe ingresar números válidos tipo entero.");
+            throw new Exception("Debe ingresar números válidos tipo entero (-2 147 483 648 a 2 147 483 647).");
         }
     }
 }
