@@ -3,7 +3,7 @@ package co.edu.uptc.presenter;
 import co.edu.uptc.interfaces.ModelInterface;
 import co.edu.uptc.interfaces.PresenterInterface;
 import co.edu.uptc.interfaces.ViewInterface;
-import co.edu.uptc.model.NumberSum;
+import co.edu.uptc.model.SumInt;
 import co.edu.uptc.view.ConsoleView;
 
 public class Runner {
@@ -13,7 +13,7 @@ public class Runner {
 
 
     private void makeMVP(){
-        model = new NumberSum();
+        model = new SumInt();
         presenter = new MainPresenter();
         view = new ConsoleView();
 
